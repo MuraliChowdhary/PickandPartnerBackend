@@ -6,7 +6,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cron = require("node-cron"); // Importing cron for scheduling tasks
-const PORT = 3033;
+const PORT = process.env.PORT || 3033;
+
 // Importing routes
 const listARoutes = require("./Routes/listARoutes");
 const listBRoutes = require("./Routes/listBRoutes");
@@ -17,8 +18,8 @@ const { mainDb, secondaryDb } = require("./model/db/db");
 
 const app = express();
 app.use(cors({
-  origin: "*", // Allow all origins (use cautiously in production)
-  methods: ["GET", "POST"], // Limit methods to those you need
+  origin: "https://pickandpartnerbot-1.onrender.com", // Allow all origins (use cautiously in production)
+  methods: ["GET", "POST","PUT","PATCH"], // Limit methods to those you need
   allowedHeaders: ["Content-Type"], // Allow headers required by your bot
 }));
 app.use(express.json());
