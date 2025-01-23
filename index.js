@@ -19,7 +19,7 @@ const { mainDb, secondaryDb } = require("./model/db/db");
 
 const app = express();
 app.use(cors({
-  origin: "https://pickandpartnerbot-1.onrender.com", // Allow all origins (use cautiously in production)
+  origin: "https://pickandpartnerbot-ef7g.onrender.com", // Allow all origins (use cautiously in production)
   methods: ["GET", "POST","PUT","PATCH"], // Limit methods to those you need
   allowedHeaders: ["Content-Type"], // Allow headers required by your bot
 }));
