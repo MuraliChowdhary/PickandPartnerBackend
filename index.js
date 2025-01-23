@@ -6,7 +6,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cron = require("node-cron"); // Importing cron for scheduling tasks
-const PORT = process.env.PORT || 3033;
+const {PORT} = process.env || 3005;
+console.log(PORT)
 
 // Importing routes
 const listARoutes = require("./Routes/listARoutes");

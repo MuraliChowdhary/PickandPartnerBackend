@@ -30,7 +30,7 @@ exports.trackUTM = async (req, res) => {
     } else {
       res.status(404).json({ error: 'UTM link not found' });
     }
-  } catch (error) {
+  } catch (error) { 
     res.status(500).json({ error: 'Error tracking UTM' });
   }
 };
